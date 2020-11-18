@@ -1,0 +1,33 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class GFG {
+	public static void main (String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		StringTokenizer str = new StringTokenizer(sc.nextLine());
+		
+		int[] arr = new int[str.countTokens()];
+		
+		int i=-1;
+		int j = arr.length;
+		
+		while(str.hasMoreTokens()){
+		    int val = Integer.parseInt(str.nextToken());
+		    
+		    if(val < 0) arr[++i] = val;
+		    else arr[--j] = val;
+	    
+		}
+		
+		
+		for(int v : arr){
+		    System.out.print(v+" ");
+		}
+		System.out.println();
+		
+	}
+}
