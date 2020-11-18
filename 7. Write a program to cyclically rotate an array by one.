@@ -1,0 +1,39 @@
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args)  throws IOException {
+	
+	BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+	
+	int test = Integer.parseInt(reader.readLine());
+	
+	while(test-- > 0){
+	    
+	    int len = Integer.parseInt(reader.readLine());
+	    StringTokenizer str = new StringTokenizer(reader.readLine());
+	    
+	    int[] arr = new int[len];
+	    
+	    int i=1;
+	    while(str.hasMoreTokens()){
+	     arr[i++ % len] = Integer.parseInt(str.nextToken());   
+	    }
+	    
+	String result = "";
+	
+	for(int val : arr)
+	    result += val+" ";
+	
+	System.out.println(result.trim());
+	
+	    
+	    
+	}
+	
+
+	
+	}
+}
